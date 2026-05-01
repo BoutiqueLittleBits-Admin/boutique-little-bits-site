@@ -59,7 +59,6 @@ export default function Home() {
               <p className="mt-1 pl-[0.82em] text-sm font-bold uppercase tracking-[0.82em] text-brand-plum/70">Boutique</p>
             </div>
             <p className="mt-8 text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Thoughtful little gifts, curated to spark joy.</p>
-            <h1 className="mt-5 font-display text-5xl md:text-7xl text-brand-plum leading-[0.95]">Little gifts. Big smiles.</h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg md:text-xl text-brand-taupe leading-relaxed">Kids' kits, self-care gifts, personalized finds, and thoughtful little surprises, handpicked to make gifting easy.</p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <a href="/shop" className="inline-block bg-brand-plum text-white px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-brand-coral transition-colors text-center shadow-sm">Shop Gift-Ready Finds</a>
