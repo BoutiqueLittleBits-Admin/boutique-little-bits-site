@@ -12,10 +12,9 @@ export default function ContactPage() {
     const data = new FormData(form);
 
     try {
-      const response = await fetch('https://formspree.io/f/xykkeqpe', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         body: data,
-        headers: { Accept: 'application/json' },
       });
 
       if (!response.ok) {

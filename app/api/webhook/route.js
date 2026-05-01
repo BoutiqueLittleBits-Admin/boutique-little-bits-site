@@ -1,5 +1,6 @@
 import Stripe from 'stripe';
 import { NextResponse } from 'next/server';
+import { getFormspreeUrl } from '../../../lib/formspree';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -27,23 +28,29 @@ export async function POST(request) {
     console.log('Customer email:', session.customer_details?.email);
     console.log('Amount:', session.amount_total / 100, session.currency?.toUpperCase());
     
-    try {
-      await fetch('https://formspree.io/f/xykkeqpe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          _subject: 'New Order on Boutique Little Bits!',
-          orderType: 'New Purchase',
-          customerEmail: session.customer_details?.email || 'Not provided',
-          amount: `$${(session.amount_total / 100).toFixed(2)} ${session.currency?.toUpperCase()}`,
-          paymentStatus: session.payment_status,
-          message: 'A new order has been placed on your store!',
-        }),
-      });
-    } catch (emailError) {
-      console.error('Failed to send notification email:', emailError);
+    const formspreeUrl = getFormspreeUrl();
+
+    if (!formspreeUrl) {
+      console.warn('Order notification skipped: Formspree is not configured.');
+    } else {
+      try {
+        await fetch(formspreeUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            _subject: 'New Order on Boutique Little Bits!',
+            orderType: 'New Purchase',
+            customerEmail: session.customer_details?.email || 'Not provided',
+            amount: `$${(session.amount_total / 100).toFixed(2)} ${session.currency?.toUpperCase()}`,
+            paymentStatus: session.payment_status,
+            message: 'A new order has been placed on your store!',
+          }),
+        });
+      } catch (emailError) {
+        console.error('Failed to send notification email:', emailError);
+      }
     }
   }
 

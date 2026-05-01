@@ -33,13 +33,6 @@ export function CartProvider({ children }) {
     setIsLoaded(true);
   }, []);
 
-  // Save cart to localStorage whenever it changes
-  useEffect(() => {
-    if (isLoaded) {
-      localStorage.setItem('cart', JSON.stringify(cart));
-    }
-  }, [cart, isLoaded]);
-
   const addToCart = (item) => {
     setCart(prevCart => {
       const itemKey = getCartItemKey(item);
