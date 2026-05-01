@@ -72,11 +72,12 @@ export default function Home() {
       </section>
 
       {featuredProducts.length > 0 && (
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative overflow-hidden px-6 py-16 watercolor-soft">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/72 via-brand-cream/78 to-white/86" aria-hidden="true"></div>
+        <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl text-brand-sage mb-4">Best Little Finds</h2>
-            <p className="text-lg text-brand-mint">Gift-ready favorites for kids, self-care, and everyday surprises</p>
+            <h2 className="font-display text-4xl md:text-5xl text-brand-plum mb-4">Best Little Finds</h2>
+            <p className="text-lg text-brand-taupe">Gift-ready favorites for kids, self-care, and everyday surprises</p>
           </div>
 
           {loading ? (
@@ -84,9 +85,9 @@ export default function Home() {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {featuredProducts.map((item, i) => (
-                <div key={item._id || i} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-100 group">
+                <div key={item._id || i} className="group overflow-hidden rounded-[1.5rem] border border-brand-lavender bg-white/95 shadow-soft backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white hover:shadow-boutique">
                   <a href={`/shop/${item.slug?.current}`}>
-                    <div className="h-52 overflow-hidden bg-gray-50">
+                    <div className="h-52 overflow-hidden bg-brand-cream">
                       <img src={item.image} alt={item.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 p-2" />
                     </div>
                   </a>
