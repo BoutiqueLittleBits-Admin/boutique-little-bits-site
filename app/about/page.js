@@ -5,20 +5,22 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/70 to-white/30" aria-hidden="true" />
         <div className="relative mx-auto max-w-5xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Curated with care</p>
-          <h1 className="mt-4 font-display text-5xl md:text-6xl leading-tight text-brand-plum">Our Story</h1>
+          <h1 className="mt-4 font-display text-4xl leading-tight text-brand-plum sm:text-5xl md:text-6xl">Our Story</h1>
           <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-brand-taupe">
             Boutique Little Bits is built around small surprises with big meaning: playful kids' kits, self-care treats, personalized finds, and thoughtful gifts chosen to make everyday moments feel special.
           </p>
         </div>
       </section>
 
-      <section className="px-6 py-14 boutique-band">
+      <section className="px-4 py-14 boutique-band sm:px-6">
         <div className="mx-auto max-w-5xl">
           <div className="rounded-[2rem] p-7 md:p-10 boutique-panel">
             <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
               <div className="rounded-[1.5rem] bg-brand-plum p-8 text-white">
-                <p className="font-logo text-6xl leading-[0.75]">Little Bits</p>
-                <p className="mt-2 pl-[0.78em] text-[11px] font-bold uppercase tracking-[0.78em] text-white/70">Boutique</p>
+                <div className="brand-lockup text-white">
+                  <p className="brand-lockup-script text-6xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
+                  <p className="brand-lockup-label text-white/70">Boutique</p>
+                </div>
                 <p className="mt-8 text-sm leading-7 text-white/80">
                   Thoughtful little gifts, curated to spark joy.
                 </p>

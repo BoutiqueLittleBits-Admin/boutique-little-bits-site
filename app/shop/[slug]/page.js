@@ -124,7 +124,7 @@ export default function ProductPage() {
     <div className="min-h-screen bg-brand-cream">
       <Toast message="Added to cart. View it anytime from the cart." isVisible={showToast} />
 
-      <section className="relative overflow-hidden px-6 pt-28 pb-12 md:pt-32 md:pb-14 watercolor-soft">
+      <section className="relative overflow-hidden px-4 pt-28 pb-12 sm:px-6 md:pt-32 md:pb-14 watercolor-soft">
         <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl">
           <a href="/shop" className="inline-flex text-sm font-bold text-brand-plum transition hover:text-brand-coral">Back to Shop</a>
@@ -217,7 +217,7 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-14 boutique-band sm:px-6">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-3">
           {[
             ["What's Included", "See the product description above for contents, selected options, and any custom details."],

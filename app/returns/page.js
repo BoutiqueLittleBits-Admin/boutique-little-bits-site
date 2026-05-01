@@ -5,14 +5,14 @@ export default function ReturnsPolicy() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-4xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Helpful and clear</p>
-          <h1 className="mt-4 font-display text-5xl md:text-6xl text-brand-plum">Returns & Refunds</h1>
+          <h1 className="mt-4 font-display text-4xl leading-tight text-brand-plum sm:text-5xl md:text-6xl">Returns & Refunds</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-brand-taupe">
             Because many Little Bits items are curated, personalized, or prepared as gifts, our policy is simple and transparent.
           </p>
         </div>
       </section>
 
-      <section className="px-6 py-14 boutique-band">
+      <section className="px-4 py-14 boutique-band sm:px-6">
         <div className="mx-auto max-w-4xl space-y-5">
           <div className="rounded-[2rem] p-7 md:p-10 boutique-panel">
             <h2 className="font-display text-4xl text-brand-plum">Our Policy</h2>

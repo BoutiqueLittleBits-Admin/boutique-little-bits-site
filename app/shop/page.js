@@ -140,15 +140,15 @@ export default function ShopPage() {
     <div className="min-h-screen bg-brand-cream">
       <Toast message="Added to cart. View it anytime from the cart." isVisible={showToast} />
 
-      <section className="relative overflow-hidden px-6 pt-28 pb-10 md:pt-32 md:pb-14 watercolor-soft">
+      <section className="relative overflow-hidden px-4 pt-28 pb-10 sm:px-6 md:pt-32 md:pb-14 watercolor-soft">
         <div className="absolute inset-0 bg-brand-plum/10" aria-hidden="true"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/68 to-white/28" aria-hidden="true"></div>
         <div className="relative mx-auto max-w-7xl">
           <div className="rounded-[2.5rem] bg-white/72 backdrop-blur-md border border-white shadow-boutique px-6 py-10 md:px-12 md:py-12">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="inline-flex flex-col items-center">
-                <p className="font-logo text-8xl md:text-9xl leading-[0.72] text-brand-plum">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
-                <p className="mt-1 pl-[0.82em] text-sm font-bold uppercase tracking-[0.82em] text-brand-plum/70">Boutique</p>
+              <div className="brand-lockup">
+                <p className="brand-lockup-script text-7xl sm:text-8xl md:text-9xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
+                <p className="brand-lockup-label text-brand-plum/70 sm:text-sm">Boutique</p>
               </div>
               <p className="mt-7 text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Thoughtful little gifts, curated to spark joy.</p>
               <p className="mt-5 text-lg leading-8 text-brand-taupe">Every item in our collection is carefully chosen to bring back happy memories, celebrate everyday moments, and make gifting feel personal, because the best gifts come in little bits.</p>
@@ -170,7 +170,7 @@ export default function ShopPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-16 boutique-band">
+      <section className="px-4 pb-16 boutique-band sm:px-6">
         <div className="mx-auto max-w-6xl rounded-[2rem] p-5 md:p-7 boutique-panel">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-4 items-center mb-6">
             <input

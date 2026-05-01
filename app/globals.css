@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #FFF9F2;
   color: #24332D;
@@ -58,4 +64,34 @@ body {
 
 .brand-script-logo {
   image-rendering: auto;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  color: #5B3A6D;
+}
+
+.brand-lockup-script {
+  display: block;
+  white-space: nowrap;
+  font-family: var(--font-logo), "Brush Script MT", "Lucida Handwriting", cursive;
+  line-height: 0.72;
+}
+
+.brand-lockup-label {
+  display: block;
+  margin-top: 0.25rem;
+  padding-left: 0.78em;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.78em;
+  text-transform: uppercase;
+}
+
+.brand-lockup.text-white,
+.brand-lockup.text-white .brand-lockup-script {
+  color: #fff;
 }

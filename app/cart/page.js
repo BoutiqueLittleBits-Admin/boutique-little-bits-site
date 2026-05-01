@@ -100,7 +100,7 @@ export default function CartPage() {
   if (cart.length === 0) {
     return (
       <div className="min-h-screen bg-brand-cream">
-        <section className="relative overflow-hidden px-6 pt-28 pb-14 md:pt-32 md:pb-18 watercolor-soft">
+        <section className="relative overflow-hidden px-4 pt-28 pb-14 sm:px-6 md:pt-32 md:pb-18 watercolor-soft">
           <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
           <div className="relative mx-auto max-w-3xl rounded-[2rem] border border-white bg-white/78 p-8 text-center shadow-boutique backdrop-blur-md md:p-12">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Your cart</p>
@@ -127,7 +127,7 @@ export default function CartPage() {
 
   return (
     <div className="min-h-screen bg-brand-cream">
-      <section className="relative overflow-hidden px-6 pt-28 pb-12 md:pt-32 md:pb-14 watercolor-soft">
+      <section className="relative overflow-hidden px-4 pt-28 pb-12 sm:px-6 md:pt-32 md:pb-14 watercolor-soft">
         <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Packed with care</p>
@@ -138,7 +138,7 @@ export default function CartPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-16 boutique-band">
+      <section className="px-4 pb-16 boutique-band sm:px-6">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-[1fr_380px]">
           <div className="space-y-6">
             <div className="overflow-hidden rounded-[2rem] boutique-panel">

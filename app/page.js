@@ -54,9 +54,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/94 via-white/70 to-white/24" aria-hidden="true"></div>
         <div className="relative max-w-6xl mx-auto">
           <div className="mx-auto max-w-4xl rounded-[2.5rem] border border-white bg-white/42 px-6 py-12 text-center shadow-boutique backdrop-blur-sm md:px-12 md:py-16">
-            <div className="inline-flex flex-col items-center text-brand-plum">
-              <p className="font-logo text-8xl md:text-9xl leading-[0.72]">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
-              <p className="mt-1 pl-[0.82em] text-sm font-bold uppercase tracking-[0.82em] text-brand-plum/70">Boutique</p>
+            <div className="brand-lockup">
+              <p className="brand-lockup-script text-7xl sm:text-8xl md:text-9xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
+              <p className="brand-lockup-label text-brand-plum/70 sm:text-sm">Boutique</p>
             </div>
             <p className="mt-8 text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Thoughtful little gifts, curated to spark joy.</p>
             <p className="mx-auto mt-6 max-w-2xl text-lg md:text-xl text-brand-taupe leading-relaxed">Kids' kits, self-care gifts, personalized finds, and thoughtful little surprises, handpicked to make gifting easy.</p>
@@ -114,11 +114,11 @@ export default function Home() {
       </section>
       )}
 
-      <section className="px-6 py-16 boutique-band">
+      <section className="px-4 py-16 boutique-band sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-display text-4xl md:text-5xl text-brand-plum mb-4 text-center">Find the perfect little something</h2>
+          <h2 className="font-display text-4xl leading-tight text-brand-plum mb-4 text-center md:text-5xl">Find the perfect little something</h2>
           <p className="text-center text-brand-taupe mb-10">Start with the reason you are shopping, then find the right little surprise.</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {[
               { name: "Kids Gifts", note: "Playful kits and creative little surprises" },
               { name: "Self-Care Gifts", note: "Spa sets and pampering picks" },
@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-16 bg-brand-cream">
+      <section className="px-4 py-16 bg-brand-cream sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral mb-3">Why Little Bits</p>
@@ -159,7 +159,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-16 boutique-band">
+      <section className="px-4 py-16 boutique-band sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
             <div>
@@ -184,7 +184,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-12 bg-brand-cream">
+      <section className="px-4 py-12 bg-brand-cream sm:px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-8 items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral mb-3">Customer trust</p>
@@ -198,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-16 boutique-band">
+      <section className="px-4 py-16 boutique-band sm:px-6">
         <div className="watercolor-soft max-w-4xl mx-auto rounded-[2rem] p-6">
           <div className="rounded-[1.5rem] bg-white/88 p-8 text-center backdrop-blur-sm">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral mb-3">Little surprises in your inbox</p>

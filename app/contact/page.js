@@ -34,14 +34,14 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-4xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Questions, orders, custom gifts</p>
-          <h1 className="mt-4 font-display text-5xl md:text-6xl text-brand-plum">Get in Touch</h1>
+          <h1 className="mt-4 font-display text-4xl leading-tight text-brand-plum sm:text-5xl md:text-6xl">Get in Touch</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-brand-taupe">
             Need help choosing a gift, checking an order, or asking about a custom request? Send us a note.
           </p>
         </div>
       </section>
 
-      <section className="px-6 py-14 boutique-band">
+      <section className="px-4 py-14 boutique-band sm:px-6">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <aside className="space-y-5">
             <div className="rounded-[2rem] p-7 boutique-card">
