@@ -123,13 +123,13 @@ export default function Home() {
               { name: "Kids Gifts", note: "Playful kits and creative little surprises" },
               { name: "Self-Care Gifts", note: "Spa sets and pampering picks" },
               { name: "Personalized Finds", note: "Custom pieces made just for them" },
-              { name: "Gifts Under $25", note: "Thoughtful without overthinking it" },
+              { name: "Gifts Under $25", note: "Thoughtful finds under $25" },
               { name: "Gift Sets", note: "Ready-to-give bundles" },
               { name: "Party Favors", note: "Small surprises for big moments" },
             ].map((cat, i) => (
-              <a key={i} href="/shop" className="group rounded-2xl p-5 min-h-32 flex flex-col justify-end border border-brand-lavender bg-brand-cream hover:bg-white hover:shadow-md transition-all">
-                <h3 className="font-display text-2xl text-brand-plum group-hover:text-brand-coral transition-colors">{cat.name}</h3>
-                <p className="text-brand-taupe text-sm mt-1">{cat.note}</p>
+              <a key={i} href="/shop" className="group flex min-h-36 flex-col items-start justify-center rounded-2xl border border-brand-lavender bg-brand-cream p-5 transition-all hover:bg-white hover:shadow-md">
+                <h3 className="font-display text-2xl leading-tight text-brand-plum transition-colors group-hover:text-brand-coral">{cat.name}</h3>
+                <p className="mt-2 text-sm leading-6 text-brand-taupe">{cat.note}</p>
               </a>
             ))}
           </div>
