@@ -1,0 +1,28 @@
+import { createClient } from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url';
+
+export const client = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'y8kpuglx',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  apiVersion: '2024-01-01',
+  useCdn: process.env.NODE_ENV === 'production',
+  // Token only needed for mutations (writing data)
+  // token: process.env.SANITY_API_TOKEN,
+});
+
+// Image URL builder for Sanity images
+const builder = imageUrlBuilder(client);
+
+export function urlFor(source) {
+  return builder.image(source);
+}
+
+// Helper to fetch data with error handling
+export async function sanityFetch(query, params = {}) {
+  try {
+    return await client.fetch(query, params);
+  } catch (error) {
+    console.error('Sanity fetch error:', error);
+    throw error;
+  }
+}

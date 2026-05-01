@@ -1,0 +1,10 @@
+node_modules
+.next
+.env.local
+
+dev-*.log
+dev-*.err
+start-*.log
+start-*.err
+
+.DS_Store

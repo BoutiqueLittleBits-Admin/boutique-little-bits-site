@@ -1,0 +1,123 @@
+// GROQ queries for Sanity
+
+// Get all active products for shop page
+export const allProductsQuery = `
+  *[_type == "product" && active == true] | order(featured desc, _createdAt desc) {
+    _id,
+    title,
+    slug,
+    "image": images[0].asset->url,
+    "images": images[].asset->url,
+    basePrice,
+    compareAtPrice,
+    sku,
+    category->{
+      _id,
+      title,
+      slug
+    },
+    tags,
+    shippingProfile,
+    processingTime,
+    customProcessingDate,
+    quantity,
+    featured,
+    hasVariations,
+    variations,
+    hasPersonalization,
+    personalization
+  }
+`;
+
+// Get single product by slug
+export const productBySlugQuery = `
+  *[_type == "product" && slug.current == $slug && active == true][0] {
+    _id,
+    title,
+    slug,
+    description,
+    "image": images[0].asset->url,
+    "images": images[].asset->url,
+    basePrice,
+    compareAtPrice,
+    sku,
+    category->{
+      _id,
+      title,
+      slug
+    },
+    tags,
+    shippingProfile,
+    processingTime,
+    customProcessingDate,
+    quantity,
+    featured,
+    hasVariations,
+    variations,
+    hasPersonalization,
+    personalization,
+    specialNote
+  }
+`;
+
+// Get all product slugs for static generation
+export const productSlugsQuery = `
+  *[_type == "product" && active == true].slug.current
+`;
+
+// Get related products by category
+export const relatedProductsQuery = `
+  *[_type == "product" && active == true && category._ref == $categoryId && slug.current != $currentSlug][0...4] {
+    _id,
+    title,
+    slug,
+    "image": images[0].asset->url,
+    basePrice,
+    category->{
+      title
+    }
+  }
+`;
+
+// Get all categories
+export const allCategoriesQuery = `
+  *[_type == "category"] | order(order asc) {
+    _id,
+    title,
+    slug,
+    description
+  }
+`;
+
+// Get featured products for homepage
+export const featuredProductsQuery = `
+  *[_type == "product" && active == true && featured == true][0...8] {
+    _id,
+    title,
+    slug,
+    "image": images[0].asset->url,
+    basePrice,
+    compareAtPrice,
+    category->{
+      title
+    }
+  }
+`;
+
+// Search products
+export const searchProductsQuery = `
+  *[_type == "product" && active == true && (
+    title match $searchTerm ||
+    description match $searchTerm ||
+    tags[] match $searchTerm
+  )] {
+    _id,
+    title,
+    slug,
+    "image": images[0].asset->url,
+    basePrice,
+    category->{
+      title
+    }
+  }
+`;
