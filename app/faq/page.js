@@ -73,10 +73,10 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-6 py-14 boutique-band">
         <div className="mx-auto max-w-4xl space-y-6">
           {faqs.map((section) => (
-            <div key={section.category} className="overflow-hidden rounded-[2rem] border border-brand-lavender bg-white shadow-soft">
+            <div key={section.category} className="overflow-hidden rounded-[2rem] boutique-panel">
               <div className="bg-brand-plum px-7 py-5 text-white">
                 <h2 className="font-display text-3xl">{section.category}</h2>
               </div>
@@ -88,7 +88,7 @@ export default function FAQPage() {
             </div>
           ))}
 
-          <div className="rounded-[2rem] bg-white p-8 text-center shadow-soft border border-brand-lavender">
+          <div className="rounded-[2rem] p-8 text-center boutique-panel">
             <h2 className="font-display text-4xl text-brand-plum">Still have questions?</h2>
             <p className="mx-auto mt-3 max-w-xl text-brand-taupe">Send us a message and we will help with order questions, custom requests, and gift details.</p>
             <a href="/contact" className="mt-6 inline-flex rounded-full bg-brand-plum px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-coral">

@@ -131,7 +131,7 @@ export default function ProductPage() {
 
           <div className="mt-7 grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <div>
-              <div className="rounded-[2rem] border border-white bg-white/72 p-4 shadow-boutique backdrop-blur-md">
+              <div className="rounded-[2rem] p-4 shadow-boutique boutique-panel">
                 <div className="flex aspect-square items-center justify-center overflow-hidden rounded-[1.5rem] bg-brand-cream">
                   <img src={allImages[selectedImageIndex] || '/placeholder.png'} alt={product.title} className="h-full w-full object-contain p-6" />
                 </div>
@@ -152,7 +152,7 @@ export default function ProductPage() {
               )}
             </div>
 
-            <div className="rounded-[2rem] border border-white bg-white/78 p-6 shadow-boutique backdrop-blur-md md:p-8">
+            <div className="rounded-[2rem] p-6 shadow-boutique md:p-8 boutique-panel">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="rounded-full bg-brand-lavender px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-brand-plum">{product.category?.title || 'Uncategorized'}</span>
                 <ProductBadges product={product} />
@@ -224,7 +224,7 @@ export default function ProductPage() {
             ["Perfect For", "Birthdays, holidays, care packages, party favors, and thoughtful just-because gifts."],
             ["Processing & Shipping", `Processing time is ${processingTime}. Orders over $50 qualify for free shipping.`],
           ].map(([title, copy]) => (
-            <div key={title} className="rounded-[1.5rem] border border-brand-lavender bg-white p-6 shadow-soft">
+            <div key={title} className="rounded-[1.5rem] p-6 boutique-card">
               <h2 className="font-display text-3xl text-brand-plum">{title}</h2>
               <p className="mt-3 text-sm leading-6 text-brand-taupe">{copy}</p>
             </div>
@@ -239,7 +239,7 @@ export default function ProductPage() {
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {relatedProducts.map((item, i) => (
-                <a key={i} href={`/shop/${item.slug?.current}`} className="group rounded-[1.5rem] border border-brand-lavender bg-white p-3 shadow-soft transition hover:-translate-y-1 hover:shadow-boutique">
+                <a key={i} href={`/shop/${item.slug?.current}`} className="group rounded-[1.5rem] p-3 transition hover:-translate-y-1 hover:shadow-boutique boutique-card">
                   <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[1.15rem] bg-brand-cream">
                     <img src={item.image} alt={item.title} className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-[1.03]" />
                   </div>

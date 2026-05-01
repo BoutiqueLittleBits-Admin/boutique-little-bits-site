@@ -12,9 +12,9 @@ export default function ReturnsPolicy() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-6 py-14 boutique-band">
         <div className="mx-auto max-w-4xl space-y-5">
-          <div className="rounded-[2rem] border border-brand-lavender bg-white p-7 shadow-soft md:p-10">
+          <div className="rounded-[2rem] p-7 md:p-10 boutique-panel">
             <h2 className="font-display text-4xl text-brand-plum">Our Policy</h2>
             <p className="mt-4 text-lg leading-8 text-brand-taupe">
               Due to the nature of hand-curated gift bags, kits, and personalized items, all sales are final unless an item arrives damaged, incorrect, or there is a fulfillment issue we need to make right.
@@ -27,7 +27,7 @@ export default function ReturnsPolicy() {
             ["Lost Packages", "If tracking shows delivered but the package is missing, check with neighbors and your local post office first. If it is still missing, contact us and we will help with next steps."],
             ["Order Cancellations", "Non-personalized orders may be cancelled before shipping. Personalized or custom orders cannot be cancelled once production has started."],
           ].map(([title, copy]) => (
-            <div key={title} className="rounded-[1.5rem] border border-brand-lavender bg-white p-6 shadow-soft">
+            <div key={title} className="rounded-[1.5rem] p-6 boutique-card">
               <h2 className="font-display text-3xl text-brand-plum">{title}</h2>
               <p className="mt-3 leading-7 text-brand-taupe">{copy}</p>
             </div>

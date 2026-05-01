@@ -12,9 +12,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-6 py-14 boutique-band">
         <div className="mx-auto max-w-5xl">
-          <div className="rounded-[2rem] border border-brand-lavender bg-white p-7 shadow-soft md:p-10">
+          <div className="rounded-[2rem] p-7 md:p-10 boutique-panel">
             <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
               <div className="rounded-[1.5rem] bg-brand-plum p-8 text-white">
                 <p className="font-logo text-6xl leading-[0.75]">Little Bits</p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
               ["Packed with Care", "Orders are prepared with attention so they feel sweet to open."],
               ["Boutique, Not Marketplace", "A smaller, warmer way to browse gifts without endless scrolling."],
             ].map(([title, copy]) => (
-              <div key={title} className="rounded-[1.5rem] border border-brand-lavender bg-white p-6 shadow-soft">
+              <div key={title} className="rounded-[1.5rem] p-6 boutique-card">
                 <h2 className="font-display text-2xl text-brand-plum">{title}</h2>
                 <p className="mt-3 text-sm leading-6 text-brand-taupe">{copy}</p>
               </div>

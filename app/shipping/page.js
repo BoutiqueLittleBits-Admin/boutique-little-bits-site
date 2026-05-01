@@ -45,8 +45,8 @@ export default function ShippingPolicy() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-brand-lavender bg-white p-7 shadow-soft md:p-10">
+      <section className="px-6 py-14 boutique-band">
+        <div className="mx-auto max-w-4xl rounded-[2rem] p-7 md:p-10 boutique-panel">
           <div className="grid gap-5">
             {sections.map((section) => (
               <div key={section.title} className="rounded-[1.5rem] bg-brand-cream p-6">
@@ -60,7 +60,7 @@ export default function ShippingPolicy() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-[1.5rem] border border-brand-lavender bg-white p-6 text-center">
+          <div className="mt-8 rounded-[1.5rem] p-6 text-center boutique-card">
             <h2 className="font-display text-3xl text-brand-plum">Questions about shipping?</h2>
             <p className="mt-3 text-brand-taupe">We are happy to help before you place an order.</p>
             <a href="/contact" className="mt-5 inline-flex rounded-full bg-brand-plum px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-coral">

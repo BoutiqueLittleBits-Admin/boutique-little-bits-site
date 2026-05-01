@@ -114,7 +114,7 @@ export default function Home() {
       </section>
       )}
 
-      <section className="py-16 px-6 bg-white">
+      <section className="px-6 py-16 boutique-band">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-display text-4xl md:text-5xl text-brand-plum mb-4 text-center">Find the perfect little something</h2>
           <p className="text-center text-brand-taupe mb-10">Start with the reason you are shopping, then find the right little surprise.</p>
@@ -127,7 +127,7 @@ export default function Home() {
               { name: "Gift Sets", note: "Ready-to-give bundles" },
               { name: "Party Favors", note: "Small surprises for big moments" },
             ].map((cat, i) => (
-              <a key={i} href="/shop" className="group flex min-h-36 flex-col items-start justify-center rounded-2xl border border-brand-lavender bg-brand-cream p-5 transition-all hover:bg-white hover:shadow-md">
+              <a key={i} href="/shop" className="group flex min-h-36 flex-col items-start justify-center rounded-2xl p-5 transition-all boutique-card hover:-translate-y-0.5 hover:bg-white">
                 <h3 className="font-display text-2xl leading-tight text-brand-plum transition-colors group-hover:text-brand-coral">{cat.name}</h3>
                 <p className="mt-2 text-sm leading-6 text-brand-taupe">{cat.note}</p>
               </a>
@@ -136,30 +136,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-brand-cream">
+      <section className="px-6 py-16 bg-brand-cream">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral mb-3">Why Little Bits</p>
             <h2 className="font-display text-4xl md:text-5xl text-brand-plum">Curated with heart</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="bg-white rounded-2xl p-6 border border-brand-lavender">
+            <div className="rounded-2xl p-6 boutique-card">
               <h3 className="font-bold text-brand-plum mb-2">Handpicked Little Finds</h3>
-              <p className="text-gray-600 text-sm">Every item is chosen to feel thoughtful, playful, and easy to gift.</p>
+              <p className="text-brand-taupe text-sm">Every item is chosen to feel thoughtful, playful, and easy to gift.</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-brand-lavender">
+            <div className="rounded-2xl p-6 boutique-card">
               <h3 className="font-bold text-brand-plum mb-2">Packed with Care</h3>
-              <p className="text-gray-600 text-sm">Sweet for birthdays, holidays, care packages, and just-because smiles.</p>
+              <p className="text-brand-taupe text-sm">Sweet for birthdays, holidays, care packages, and just-because smiles.</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-brand-lavender">
+            <div className="rounded-2xl p-6 boutique-card">
               <h3 className="font-bold text-brand-plum mb-2">A Boutique, Not a Marketplace</h3>
-              <p className="text-gray-600 text-sm">A warmer way to browse gifts without endless scrolling.</p>
+              <p className="text-brand-taupe text-sm">A warmer way to browse gifts without endless scrolling.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-16 bg-white">
+      <section className="px-6 py-16 boutique-band">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
             <div>
@@ -173,7 +173,7 @@ export default function Home() {
                 ["Personalized Surprises", "Custom touches that make a little gift feel made for them."],
                 ["Thoughtful Under $25", "Sweet, simple finds that still feel personal."],
               ].map(([title, copy]) => (
-                <a key={title} href="/shop" className="rounded-[1.5rem] border border-brand-lavender bg-brand-cream p-5 transition hover:-translate-y-1 hover:bg-white hover:shadow-soft">
+                <a key={title} href="/shop" className="rounded-[1.5rem] p-5 transition hover:-translate-y-1 hover:bg-white boutique-card">
                   <h3 className="font-display text-2xl text-brand-plum">{title}</h3>
                   <p className="mt-3 text-sm leading-6 text-brand-taupe">{copy}</p>
                   <span className="mt-5 inline-block text-sm font-bold text-brand-coral">Shop now</span>
@@ -184,7 +184,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 px-6 bg-brand-mint/20">
+      <section className="px-6 py-12 bg-brand-cream">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-8 items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral mb-3">Customer trust</p>
@@ -198,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-16 bg-brand-cream">
+      <section className="px-6 py-16 boutique-band">
         <div className="watercolor-soft max-w-4xl mx-auto rounded-[2rem] p-6">
           <div className="rounded-[1.5rem] bg-white/88 p-8 text-center backdrop-blur-sm">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral mb-3">Little surprises in your inbox</p>

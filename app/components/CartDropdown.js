@@ -6,16 +6,16 @@ export default function CartDropdown() {
 
   if (!isLoaded) {
     return (
-      <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 p-4 z-50">
-        <p className="text-center text-gray-500">Loading...</p>
+      <div className="absolute right-0 top-full mt-2 w-80 rounded-xl p-4 z-50 boutique-panel">
+        <p className="text-center text-brand-taupe">Loading...</p>
       </div>
     );
   }
 
   if (!cart || cart.length === 0) {
     return (
-      <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 p-6 z-50">
-        <p className="text-center text-gray-500">Your cart is empty</p>
+      <div className="absolute right-0 top-full mt-2 w-80 rounded-xl p-6 z-50 boutique-panel">
+        <p className="text-center text-brand-taupe">Your cart is empty</p>
         <a 
           href="/shop" 
           className="block mt-4 text-center bg-brand-sage text-white py-2 rounded-lg font-semibold hover:bg-brand-coral transition-colors"
@@ -27,13 +27,13 @@ export default function CartDropdown() {
   }
 
   return (
-    <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 p-4 z-50">
+    <div className="absolute right-0 top-full mt-2 w-80 rounded-xl p-4 z-50 boutique-panel">
       <h3 className="font-bold text-brand-sage mb-4">Your Cart ({cartCount})</h3>
       
       <div className="max-h-64 overflow-y-auto space-y-3">
         {cart.map((item, index) => (
-          <div key={index} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
-            <div className="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
+          <div key={index} className="flex items-center gap-3 p-2 bg-brand-cream rounded-lg">
+            <div className="w-12 h-12 bg-white rounded-lg overflow-hidden flex-shrink-0">
               <img 
                 src={item.image} 
                 alt={item.name}
@@ -46,7 +46,7 @@ export default function CartDropdown() {
             </div>
             <button 
               onClick={() => removeFromCart(item.slug)}
-              className="text-gray-400 hover:text-red-500 transition-colors flex-shrink-0"
+              className="text-brand-taupe hover:text-brand-coral transition-colors flex-shrink-0"
             >
               ✕
             </button>
@@ -54,7 +54,7 @@ export default function CartDropdown() {
         ))}
       </div>
       
-      <div className="border-t border-gray-100 mt-4 pt-4">
+      <div className="border-t border-brand-lavender mt-4 pt-4">
         <div className="flex justify-between mb-4">
           <span className="font-semibold text-brand-sage">Total:</span>
           <span className="font-bold text-brand-coral">${cartTotal.toFixed(2)}</span>

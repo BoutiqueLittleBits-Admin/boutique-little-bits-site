@@ -41,10 +41,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-6 py-14 boutique-band">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <aside className="space-y-5">
-            <div className="rounded-[2rem] border border-brand-lavender bg-white p-7 shadow-soft">
+            <div className="rounded-[2rem] p-7 boutique-card">
               <h2 className="font-display text-3xl text-brand-plum">Contact Info</h2>
               <div className="mt-6 space-y-5">
                 <div>
@@ -60,7 +60,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-brand-lavender bg-white p-7 shadow-soft">
+            <div className="rounded-[2rem] p-7 boutique-card">
               <h2 className="font-display text-3xl text-brand-plum">Find Us Online</h2>
               <p className="mt-3 leading-7 text-brand-taupe">You can also find Boutique Little Bits on Etsy and eBay.</p>
               <div className="mt-5 flex flex-col gap-3">
@@ -74,7 +74,7 @@ export default function ContactPage() {
             </div>
           </aside>
 
-          <div className="rounded-[2rem] border border-brand-lavender bg-white p-7 shadow-soft md:p-10">
+          <div className="rounded-[2rem] p-7 md:p-10 boutique-panel">
             <h2 className="font-display text-4xl text-brand-plum">Send a Message</h2>
             {submitted ? (
               <div className="mt-8 rounded-[1.5rem] bg-brand-cream p-8 text-center">

@@ -43,7 +43,7 @@ function getDescriptor(item) {
 
 function ProductCard({ item, onAdd }) {
   return (
-    <div className="group rounded-[1.5rem] border border-brand-lavender bg-white p-3 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-boutique">
+    <div className="group rounded-[1.5rem] p-3 transition duration-300 hover:-translate-y-1 hover:shadow-boutique boutique-card">
       <a href={`/shop/${item.slug?.current}`} className="block aspect-[4/5] overflow-hidden rounded-[1.15rem] bg-brand-cream">
         <img src={item.image} alt={item.title} className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-[1.03]" />
       </a>
@@ -170,8 +170,8 @@ export default function ShopPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-16">
-        <div className="mx-auto max-w-6xl rounded-[2rem] bg-white p-5 md:p-7 shadow-soft border border-brand-lavender">
+      <section className="px-6 pb-16 boutique-band">
+        <div className="mx-auto max-w-6xl rounded-[2rem] p-5 md:p-7 boutique-panel">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-4 items-center mb-6">
             <input
               type="text"
@@ -180,7 +180,7 @@ export default function ShopPage() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full rounded-full border border-brand-lavender bg-brand-cream px-5 py-3 text-brand-ink placeholder:text-brand-taupe/70 focus:border-brand-plum focus:ring-2 focus:ring-brand-lavender outline-none"
             />
-            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="rounded-full border border-brand-lavender bg-white px-5 py-3 text-sm font-semibold text-brand-plum">
+            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="rounded-full border border-brand-lavender bg-white/90 px-5 py-3 text-sm font-semibold text-brand-plum">
               <option value="default">Sort by: Featured</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
@@ -191,7 +191,7 @@ export default function ShopPage() {
           <div className="mb-4 overflow-x-auto pb-2">
             <div className="flex gap-2 min-w-max">
               {['All Gifts', ...shopperFilters.map((filter) => filter.label)].map((filter) => (
-                <button key={filter} onClick={() => setActiveShopperFilter(filter)} className={`rounded-full border px-4 py-2 text-sm font-bold transition ${activeShopperFilter === filter ? 'border-brand-plum bg-brand-plum text-white' : 'border-brand-lavender bg-white text-brand-plum hover:bg-brand-lavender/60'}`}>{filter}</button>
+                <button key={filter} onClick={() => setActiveShopperFilter(filter)} className={`rounded-full border px-4 py-2 text-sm font-bold transition ${activeShopperFilter === filter ? 'border-brand-plum bg-brand-plum text-white' : 'border-brand-lavender bg-white/80 text-brand-plum hover:bg-white'}`}>{filter}</button>
               ))}
             </div>
           </div>
@@ -230,7 +230,7 @@ export default function ShopPage() {
                 ))}
               </div>
 
-              <div className="mt-10 rounded-[1.5rem] border border-brand-lavender bg-brand-cream p-7 md:flex md:items-center md:justify-between">
+              <div className="mt-10 rounded-[1.5rem] p-7 md:flex md:items-center md:justify-between boutique-card">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral">Still deciding?</p>
                   <h2 className="mt-2 font-display text-3xl text-brand-plum">Start with the gift-ready favorites.</h2>

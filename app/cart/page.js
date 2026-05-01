@@ -138,10 +138,10 @@ export default function CartPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-16">
+      <section className="px-6 pb-16 boutique-band">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-[1fr_380px]">
           <div className="space-y-6">
-            <div className="overflow-hidden rounded-[2rem] border border-brand-lavender bg-white shadow-soft">
+            <div className="overflow-hidden rounded-[2rem] boutique-panel">
               {cart.map((item, index) => (
                 <div key={item.cartKey || item.slug || index} className="grid gap-4 border-b border-brand-lavender p-5 last:border-b-0 md:grid-cols-[96px_1fr_auto] md:items-center md:p-6">
                   <div className="h-24 w-24 overflow-hidden rounded-[1.25rem] bg-brand-cream">
@@ -172,7 +172,7 @@ export default function CartPage() {
               ))}
             </div>
 
-            <div className="rounded-[2rem] border border-brand-lavender bg-white p-6 shadow-soft">
+            <div className="rounded-[2rem] p-6 boutique-panel">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-coral">Gift options</p>
               <h2 className="mt-2 font-display text-3xl text-brand-plum">Make it ready to give.</h2>
 
@@ -205,7 +205,7 @@ export default function CartPage() {
           </div>
 
           <aside>
-            <div className="sticky top-24 rounded-[2rem] border border-brand-lavender bg-white p-6 shadow-boutique">
+            <div className="sticky top-24 rounded-[2rem] p-6 shadow-boutique boutique-panel">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-coral">Order summary</p>
               <h2 className="mt-2 font-display text-3xl text-brand-plum">Ready for checkout</h2>
 
