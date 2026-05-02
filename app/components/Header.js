@@ -11,6 +11,7 @@ export default function Header() {
   const freeShippingThreshold = 50;
   const amountToFreeShipping = freeShippingThreshold - cartTotal;
   const qualifiesForFreeShipping = cartTotal >= freeShippingThreshold;
+  const headerButtonClass = "inline-flex h-11 min-w-[92px] items-center justify-center rounded-full border border-brand-plum/70 bg-white/58 px-4 text-sm font-bold text-brand-plum shadow-sm transition hover:bg-brand-plum hover:text-white whitespace-nowrap";
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/30 bg-white/16 backdrop-blur-xl">
@@ -51,11 +52,11 @@ export default function Header() {
         </nav>
 
         <div className="flex flex-shrink-0 items-center justify-end gap-2 md:gap-3">
-          <a href="/shop" className="hidden lg:inline-flex h-10 items-center rounded-full border border-white/60 bg-white/55 px-4 text-sm font-semibold text-brand-taupe shadow-sm hover:text-brand-plum">
+          <a href="/shop" className={`${headerButtonClass} hidden lg:inline-flex min-w-[124px]`}>
             Search gifts
           </a>
           <div className="relative group">
-            <a href="/cart" className="inline-flex h-10 items-center rounded-full border border-brand-plum bg-white/65 px-5 text-sm font-bold text-brand-plum shadow-sm transition hover:bg-brand-plum hover:text-white whitespace-nowrap">
+            <a href="/cart" className={headerButtonClass}>
               Cart ({cartCount})
             </a>
 
@@ -124,7 +125,7 @@ export default function Header() {
             </div>
           </div>
 
-          <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden rounded-full border border-brand-lavender px-3 py-2 text-brand-plum font-bold" aria-label="Toggle menu">
+          <button onClick={() => setMenuOpen(!menuOpen)} className={`${headerButtonClass} md:hidden`} aria-label="Toggle menu">
             {menuOpen ? 'x' : 'Menu'}
           </button>
         </div>
