@@ -53,7 +53,7 @@ export default function Home() {
       <section className="relative overflow-hidden px-6 pt-28 pb-12 md:pt-32 md:pb-16 watercolor-soft">
         <div className="absolute inset-0 bg-gradient-to-r from-white/94 via-white/70 to-white/24" aria-hidden="true"></div>
         <div className="relative max-w-6xl mx-auto">
-          <div className="mx-auto max-w-4xl rounded-[2.5rem] border border-white bg-white/42 px-6 py-12 text-center shadow-boutique backdrop-blur-sm md:px-12 md:py-16">
+          <div className="mx-auto max-w-4xl rounded-[2.5rem] px-6 py-12 text-center md:px-12 md:py-16 boutique-surface">
             <div className="brand-lockup">
               <p className="brand-lockup-script text-7xl sm:text-8xl md:text-9xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
               <p className="brand-lockup-label text-brand-plum/70 sm:text-sm">Boutique</p>
@@ -85,7 +85,7 @@ export default function Home() {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {featuredProducts.map((item, i) => (
-                <div key={item._id || i} className="group overflow-hidden rounded-[1.5rem] border border-brand-lavender bg-white/95 shadow-soft backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white hover:shadow-boutique">
+                <div key={item._id || i} className="group overflow-hidden rounded-[1.5rem] transition-all hover:-translate-y-1 hover:shadow-boutique boutique-surface">
                   <a href={`/shop/${item.slug?.current}`}>
                     <div className="h-52 overflow-hidden bg-brand-cream">
                       <img src={item.image} alt={item.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 p-2" />
@@ -200,7 +200,7 @@ export default function Home() {
 
       <section className="px-4 py-16 boutique-band sm:px-6">
         <div className="watercolor-soft max-w-4xl mx-auto rounded-[2rem] p-6">
-          <div className="rounded-[1.5rem] bg-white/88 p-8 text-center backdrop-blur-sm">
+          <div className="rounded-[1.5rem] p-8 text-center boutique-surface">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral mb-3">Little surprises in your inbox</p>
             <h2 className="font-display text-4xl text-brand-plum">Gift ideas, new arrivals, and sweet finds.</h2>
             <p className="mt-3 text-brand-taupe">Newsletter signup is coming soon. For now, check back often for new little finds.</p>

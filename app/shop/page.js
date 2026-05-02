@@ -43,7 +43,7 @@ function getDescriptor(item) {
 
 function ProductCard({ item, onAdd }) {
   return (
-    <div className="group rounded-[1.5rem] p-3 transition duration-300 hover:-translate-y-1 hover:shadow-boutique boutique-card">
+    <div className="group rounded-[1.5rem] p-3 transition duration-300 hover:-translate-y-1 hover:shadow-boutique boutique-surface">
       <a href={`/shop/${item.slug?.current}`} className="block aspect-[4/5] overflow-hidden rounded-[1.15rem] bg-brand-cream">
         <img src={item.image} alt={item.title} className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-[1.03]" />
       </a>
@@ -144,7 +144,7 @@ export default function ShopPage() {
         <div className="absolute inset-0 bg-brand-plum/10" aria-hidden="true"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/68 to-white/28" aria-hidden="true"></div>
         <div className="relative mx-auto max-w-7xl">
-          <div className="rounded-[2.5rem] bg-white/72 backdrop-blur-md border border-white shadow-boutique px-6 py-10 md:px-12 md:py-12">
+          <div className="rounded-[2.5rem] px-6 py-10 md:px-12 md:py-12 boutique-surface">
             <div className="mx-auto max-w-3xl text-center">
               <div className="brand-lockup">
                 <p className="brand-lockup-script text-7xl sm:text-8xl md:text-9xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
@@ -156,7 +156,7 @@ export default function ShopPage() {
 
             <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
               {giftPaths.map((path) => (
-                <a key={path.title} href="/shop" className="group rounded-2xl bg-white/78 p-4 border border-white/90 backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white hover:shadow-soft">
+                <a key={path.title} href="/shop" className="group rounded-2xl p-4 transition hover:-translate-y-0.5 hover:shadow-soft boutique-surface">
                   <h2 className="font-display text-xl leading-tight text-brand-plum group-hover:text-brand-coral transition-colors">{path.title}</h2>
                   <p className="mt-2 text-xs leading-5 text-brand-taupe">{path.text}</p>
                 </a>
@@ -164,7 +164,7 @@ export default function ShopPage() {
             </div>
           </div>
 
-          <div className="mx-auto mt-6 max-w-5xl rounded-full border border-white/80 bg-white/78 px-5 py-3 shadow-soft backdrop-blur-sm">
+          <div className="mx-auto mt-6 max-w-5xl rounded-full px-5 py-3 boutique-surface">
             <TrustStrip />
           </div>
         </div>
