@@ -62,15 +62,15 @@ export default function Header() {
             </a>
 
             <div className="absolute right-0 top-full pt-2 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="overflow-hidden rounded-[1.25rem] boutique-panel">
+              <div className="overflow-hidden rounded-[1.25rem] border border-brand-lavender bg-white/98 shadow-boutique backdrop-blur-md">
                 {isLoaded && cartCount > 0 && (
-                  <div className="border-b border-brand-lavender bg-brand-cream/80 p-4">
+                  <div className="border-b border-brand-lavender bg-brand-cream p-4">
                     {qualifiesForFreeShipping ? (
                       <p className="text-green-700 font-semibold text-sm">You qualify for FREE shipping.</p>
                     ) : (
                       <>
                         <p className="text-sm text-brand-sage mb-2">Add <strong>${amountToFreeShipping.toFixed(2)}</strong> more for free shipping.</p>
-                        <div className="w-full bg-white rounded-full h-2">
+                        <div className="w-full bg-white rounded-full h-2 shadow-inner">
                           <div className="bg-brand-coral rounded-full h-2 transition-all" style={{ width: `${Math.min((cartTotal / freeShippingThreshold) * 100, 100)}%` }}></div>
                         </div>
                       </>
@@ -89,12 +89,12 @@ export default function Header() {
                   <>
                     <div className="max-h-64 overflow-y-auto">
                       {cart.slice(0, 3).map((item, index) => (
-                        <div key={item.cartKey || item.slug || index} className="flex items-center gap-3 p-4 border-b border-brand-lavender last:border-b-0">
+                        <div key={item.cartKey || item.slug || index} className="flex items-center gap-3 p-4 border-b border-brand-lavender bg-white last:border-b-0">
                           <div className="w-12 h-12 bg-brand-cream rounded-lg overflow-hidden flex-shrink-0">
                             <img src={item.image} alt={item.name} className="w-full h-full object-contain p-1" />
                           </div>
                           <div className="flex-grow min-w-0">
-                            <h4 className="text-sm font-medium text-brand-sage truncate">{item.name}</h4>
+                            <h4 className="text-sm font-semibold text-brand-sage truncate">{item.name}</h4>
                             <p className="text-sm text-brand-coral font-bold">${item.price} x {item.quantity || 1}</p>
                           </div>
                           <button
@@ -113,7 +113,7 @@ export default function Header() {
                       )}
                     </div>
 
-                    <div className="p-4 bg-brand-cream/70 border-t border-brand-lavender">
+                    <div className="p-4 bg-brand-cream border-t border-brand-lavender">
                       <div className="flex justify-between mb-3">
                         <span className="font-semibold text-brand-sage">Subtotal:</span>
                         <span className="font-bold text-brand-coral">${cartTotal.toFixed(2)}</span>
