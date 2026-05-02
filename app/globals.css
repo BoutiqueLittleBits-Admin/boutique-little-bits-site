@@ -95,3 +95,15 @@ body {
 .brand-lockup.text-white .brand-lockup-script {
   color: #fff;
 }
+
+.brand-logo-image {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  image-rendering: auto;
+}
+
+.brand-logo-image-light {
+  filter: brightness(0) invert(1);
+  opacity: 0.96;
+}
