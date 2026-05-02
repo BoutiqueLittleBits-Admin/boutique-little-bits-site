@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-4 py-16 bg-brand-cream sm:px-6">
+      <section className="px-4 py-16 boutique-band sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral mb-3">Why Little Bits</p>
@@ -184,7 +184,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-4 py-12 bg-brand-cream sm:px-6">
+      <section className="px-4 py-12 boutique-band sm:px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-8 items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-coral mb-3">Customer trust</p>
