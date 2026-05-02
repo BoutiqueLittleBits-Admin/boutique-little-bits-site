@@ -4,7 +4,6 @@ import { useCart } from '../components/CartContext';
 import Toast from '../components/Toast';
 import TrustStrip from '../components/TrustStrip';
 import ProductBadges from '../components/ProductBadges';
-import BrandLogo from '../components/BrandLogo';
 
 const shopperFilters = [
   { label: "Best Sellers", test: (p) => p.featured },
@@ -147,7 +146,10 @@ export default function ShopPage() {
         <div className="relative mx-auto max-w-7xl">
           <div className="rounded-[2.5rem] bg-white/72 backdrop-blur-md border border-white shadow-boutique px-6 py-10 md:px-12 md:py-12">
             <div className="mx-auto max-w-3xl text-center">
-              <BrandLogo className="mx-auto w-full max-w-[620px]" />
+              <div className="brand-lockup">
+                <p className="brand-lockup-script text-7xl sm:text-8xl md:text-9xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
+                <p className="brand-lockup-label text-brand-plum/70 sm:text-sm">Boutique</p>
+              </div>
               <p className="mt-7 text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Thoughtful little gifts, curated to spark joy.</p>
               <p className="mt-5 text-lg leading-8 text-brand-taupe">Every item in our collection is carefully chosen to bring back happy memories, celebrate everyday moments, and make gifting feel personal, because the best gifts come in little bits.</p>
             </div>

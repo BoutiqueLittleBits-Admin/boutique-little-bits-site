@@ -4,7 +4,6 @@ import { useCart } from './components/CartContext';
 import Toast from './components/Toast';
 import TrustStrip from './components/TrustStrip';
 import ProductBadges from './components/ProductBadges';
-import BrandLogo from './components/BrandLogo';
 
 export default function Home() {
   const { addToCart } = useCart();
@@ -55,7 +54,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/94 via-white/70 to-white/24" aria-hidden="true"></div>
         <div className="relative max-w-6xl mx-auto">
           <div className="mx-auto max-w-4xl rounded-[2.5rem] border border-white bg-white/42 px-6 py-12 text-center shadow-boutique backdrop-blur-sm md:px-12 md:py-16">
-            <BrandLogo className="mx-auto w-full max-w-[620px]" />
+            <div className="brand-lockup">
+              <p className="brand-lockup-script text-7xl sm:text-8xl md:text-9xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
+              <p className="brand-lockup-label text-brand-plum/70 sm:text-sm">Boutique</p>
+            </div>
             <p className="mt-8 text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Thoughtful little gifts, curated to spark joy.</p>
             <p className="mx-auto mt-6 max-w-2xl text-lg md:text-xl text-brand-taupe leading-relaxed">Kids' kits, self-care gifts, personalized finds, and thoughtful little surprises, handpicked to make gifting easy.</p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">

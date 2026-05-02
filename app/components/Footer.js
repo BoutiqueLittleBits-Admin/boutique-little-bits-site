@@ -1,12 +1,13 @@
-import BrandLogo from './BrandLogo';
-
 export default function Footer() {
   return (
     <footer className="bg-brand-plum text-white mt-20">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <BrandLogo light className="mb-5 w-44" />
+            <div className="brand-lockup mb-5 text-white">
+              <span className="brand-lockup-script text-5xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</span>
+              <span className="brand-lockup-label text-white/70">Boutique</span>
+            </div>
             <p className="text-white/75 text-sm">
               Gift-ready little finds, curated with heart.
             </p>

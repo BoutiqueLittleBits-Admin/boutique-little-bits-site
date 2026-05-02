@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { useCart } from './CartContext';
-import BrandLogo from './BrandLogo';
 
 export default function Header() {
   const { cart = [], cartCount, cartTotal, removeFromCart, isLoaded } = useCart();
@@ -17,7 +16,10 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/30 bg-white/16 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-6 sm:px-5 md:gap-8 md:px-8">
         <a href="/" className="flex-shrink-0 text-brand-plum" aria-label="Boutique Little Bits home">
-          <BrandLogo className="w-44 sm:w-52 md:w-60" />
+          <span className="brand-lockup">
+            <span className="brand-lockup-script text-4xl sm:text-5xl md:text-6xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</span>
+            <span className="brand-lockup-label text-brand-plum/70">Boutique</span>
+          </span>
         </a>
 
         <nav className="hidden md:flex flex-1 justify-center min-w-0">

@@ -1,5 +1,3 @@
-import BrandLogo from '../components/BrandLogo';
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-brand-cream">
@@ -19,7 +17,10 @@ export default function AboutPage() {
           <div className="rounded-[2rem] p-7 md:p-10 boutique-panel">
             <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
               <div className="rounded-[1.5rem] bg-brand-plum p-8 text-white">
-                <BrandLogo light className="w-64" />
+                <div className="brand-lockup text-white">
+                  <p className="brand-lockup-script text-6xl">Litt<span className="inline-block origin-bottom scale-y-[0.86]">l</span>e Bits</p>
+                  <p className="brand-lockup-label text-white/70">Boutique</p>
+                </div>
                 <p className="mt-8 text-sm leading-7 text-white/80">
                   Thoughtful little gifts, curated to spark joy.
                 </p>
