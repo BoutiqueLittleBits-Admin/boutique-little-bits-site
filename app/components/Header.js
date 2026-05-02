@@ -12,6 +12,7 @@ export default function Header() {
   const amountToFreeShipping = freeShippingThreshold - cartTotal;
   const qualifiesForFreeShipping = cartTotal >= freeShippingThreshold;
   const headerButtonClass = "inline-flex h-11 min-w-[92px] items-center justify-center rounded-full border border-brand-plum/70 bg-white/58 px-4 text-sm font-bold text-brand-plum shadow-sm transition hover:bg-brand-plum hover:text-white whitespace-nowrap";
+  const navLinkClass = "relative inline-flex h-11 items-center justify-center px-2 text-xs font-bold uppercase tracking-[0.16em] transition whitespace-nowrap";
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/30 bg-white/16 backdrop-blur-xl">
@@ -24,7 +25,7 @@ export default function Header() {
         </a>
 
         <nav className="hidden md:flex flex-1 justify-center min-w-0">
-          <div className="inline-flex items-center gap-8 whitespace-nowrap">
+          <div className="inline-flex h-11 items-center gap-6 whitespace-nowrap">
             {[
               ['/', 'Home'],
               ['/shop', 'Shop'],
@@ -38,9 +39,9 @@ export default function Header() {
                 <a
                   key={label}
                   href={href}
-                  className={`relative py-2 text-xs font-bold uppercase tracking-[0.16em] transition whitespace-nowrap ${
+                  className={`${navLinkClass} ${
                     active || giftActive
-                      ? 'text-brand-plum after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-px after:bg-brand-plum'
+                      ? 'text-brand-plum after:absolute after:left-2 after:right-2 after:bottom-1 after:h-px after:bg-brand-plum'
                       : 'text-brand-ink/55 hover:text-brand-plum'
                   }`}
                 >
