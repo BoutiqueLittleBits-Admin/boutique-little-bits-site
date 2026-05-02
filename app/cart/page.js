@@ -18,7 +18,7 @@ export default function CartPage() {
 
   if (!isLoaded) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-brand-cream">
+      <div className="flex min-h-screen items-center justify-center">
         <div className="h-12 w-12 animate-spin rounded-full border-4 border-brand-lavender border-t-brand-plum" />
       </div>
     );
@@ -99,7 +99,7 @@ export default function CartPage() {
 
   if (cart.length === 0) {
     return (
-      <div className="min-h-screen bg-brand-cream">
+      <div className="min-h-screen">
         <section className="relative overflow-hidden px-4 pt-28 pb-14 sm:px-6 md:pt-32 md:pb-18 watercolor-soft">
           <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
           <div className="relative mx-auto max-w-3xl rounded-[2rem] border border-white bg-white/78 p-8 text-center shadow-boutique backdrop-blur-md md:p-12">
@@ -126,7 +126,7 @@ export default function CartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-brand-cream">
+    <div className="min-h-screen">
       <section className="relative overflow-hidden px-4 pt-28 pb-12 sm:px-6 md:pt-32 md:pb-14 watercolor-soft">
         <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl">

@@ -97,7 +97,7 @@ export default function ProductPage() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-brand-cream">
+      <div className="flex min-h-screen items-center justify-center">
         <div className="h-12 w-12 animate-spin rounded-full border-4 border-brand-lavender border-t-brand-plum" />
       </div>
     );
@@ -105,7 +105,7 @@ export default function ProductPage() {
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-brand-cream">
+      <div className="min-h-screen">
         <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 py-28 watercolor-soft">
           <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
           <div className="relative rounded-[2rem] border border-white bg-white/78 p-8 text-center shadow-boutique backdrop-blur-md">
@@ -121,7 +121,7 @@ export default function ProductPage() {
   const processingTime = getProcessingTimeText();
 
   return (
-    <div className="min-h-screen bg-brand-cream">
+    <div className="min-h-screen">
       <Toast message="Added to cart. View it anytime from the cart." isVisible={showToast} />
 
       <section className="relative overflow-hidden px-4 pt-28 pb-12 sm:px-6 md:pt-32 md:pb-14 watercolor-soft">

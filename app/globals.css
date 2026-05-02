@@ -10,7 +10,7 @@ body {
 
 body {
   background-color: #FFF9F2;
-  background-image: linear-gradient(rgba(255, 249, 242, 0.5), rgba(255, 249, 242, 0.68)), url("/brand/watercolor-soft.png");
+  background-image: linear-gradient(rgba(255, 249, 242, 0.16), rgba(255, 249, 242, 0.24)), url("/brand/watercolor-soft.png");
   background-attachment: fixed;
   background-position: center top;
   background-size: cover;
@@ -40,19 +40,11 @@ body {
 }
 
 .watercolor-soft {
-  background-color: #FFF9F2;
-  background-image: linear-gradient(rgba(255, 249, 242, 0.46), rgba(255, 249, 242, 0.62)), url("/brand/watercolor-soft.png");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center top;
+  background: transparent;
 }
 
 .boutique-band {
-  background-color: #FFF9F2;
-  background-image: linear-gradient(rgba(255, 249, 242, 0.5), rgba(255, 249, 242, 0.68)), url("/brand/watercolor-soft.png");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center top;
+  background: transparent;
 }
 
 .boutique-panel {

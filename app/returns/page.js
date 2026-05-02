@@ -1,6 +1,6 @@
 export default function ReturnsPolicy() {
   return (
-    <div className="min-h-screen bg-brand-cream">
+    <div className="min-h-screen">
       <section className="relative overflow-hidden px-6 pt-28 pb-12 md:pt-32 md:pb-16 watercolor-soft">
         <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-4xl text-center">

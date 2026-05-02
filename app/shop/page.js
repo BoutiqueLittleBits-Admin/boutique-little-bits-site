@@ -130,14 +130,14 @@ export default function ShopPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-brand-cream">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-4 border-brand-lavender border-t-brand-plum mx-auto"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-brand-cream">
+    <div className="min-h-screen">
       <Toast message="Added to cart. View it anytime from the cart." isVisible={showToast} />
 
       <section className="relative overflow-hidden px-4 pt-28 pb-10 sm:px-6 md:pt-32 md:pb-14 watercolor-soft">
