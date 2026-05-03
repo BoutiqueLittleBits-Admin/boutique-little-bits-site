@@ -63,7 +63,6 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden px-6 pt-28 pb-12 md:pt-32 md:pb-16 watercolor-soft">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-4xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Helpful answers</p>
           <h1 className="mt-4 font-display text-4xl leading-tight text-brand-plum sm:text-5xl md:text-6xl">Frequently Asked Questions</h1>

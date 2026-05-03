@@ -141,8 +141,6 @@ export default function ShopPage() {
       <Toast message="Added to cart. View it anytime from the cart." isVisible={showToast} />
 
       <section className="relative overflow-hidden px-4 pt-28 pb-10 sm:px-6 md:pt-32 md:pb-14 watercolor-soft">
-        <div className="absolute inset-0 bg-brand-plum/10" aria-hidden="true"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/68 to-white/28" aria-hidden="true"></div>
         <div className="relative mx-auto max-w-7xl">
           <div className="rounded-[2.5rem] px-6 py-10 md:px-12 md:py-12 boutique-surface">
             <div className="mx-auto max-w-3xl text-center">
@@ -178,9 +176,9 @@ export default function ShopPage() {
               placeholder="Search gifts, kits, spa sets, purses..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-full border border-brand-lavender bg-brand-cream px-5 py-3 text-brand-ink placeholder:text-brand-taupe/70 focus:border-brand-plum focus:ring-2 focus:ring-brand-lavender outline-none"
+              className="w-full rounded-full border border-brand-lavender bg-white/72 px-5 py-3 text-brand-ink placeholder:text-brand-taupe/70 backdrop-blur-sm focus:border-brand-plum focus:ring-2 focus:ring-brand-lavender outline-none"
             />
-            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="rounded-full border border-brand-lavender bg-white/90 px-5 py-3 text-sm font-semibold text-brand-plum">
+            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="rounded-full border border-brand-lavender bg-white/72 px-5 py-3 text-sm font-semibold text-brand-plum backdrop-blur-sm">
               <option value="default">Sort by: Featured</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
@@ -191,7 +189,7 @@ export default function ShopPage() {
           <div className="mb-4 overflow-x-auto pb-2">
             <div className="flex gap-2 min-w-max">
               {['All Gifts', ...shopperFilters.map((filter) => filter.label)].map((filter) => (
-                <button key={filter} onClick={() => setActiveShopperFilter(filter)} className={`rounded-full border px-4 py-2 text-sm font-bold transition ${activeShopperFilter === filter ? 'border-brand-plum bg-brand-plum text-white' : 'border-brand-lavender bg-white/80 text-brand-plum hover:bg-white'}`}>{filter}</button>
+                <button key={filter} onClick={() => setActiveShopperFilter(filter)} className={`rounded-full border px-4 py-2 text-sm font-bold backdrop-blur-sm transition ${activeShopperFilter === filter ? 'border-brand-plum bg-brand-plum text-white shadow-soft' : 'border-brand-lavender bg-white/64 text-brand-plum hover:bg-white/78'}`}>{filter}</button>
               ))}
             </div>
           </div>
@@ -201,7 +199,7 @@ export default function ShopPage() {
               {categories.map((cat) => {
                 const count = cat === 'All' ? products.length : products.filter((p) => p.category?.title === cat).length;
                 return (
-                  <button key={cat} onClick={() => setActiveCategory(cat)} className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === cat ? 'border-brand-sage bg-brand-sage text-white' : 'border-brand-mint bg-brand-cream text-brand-sage hover:bg-brand-mint/70'}`}>
+                  <button key={cat} onClick={() => setActiveCategory(cat)} className={`rounded-full border px-4 py-2 text-sm font-semibold backdrop-blur-sm transition ${activeCategory === cat ? 'border-brand-sage bg-brand-sage text-white shadow-soft' : 'border-brand-mint bg-white/60 text-brand-sage hover:bg-white/76'}`}>
                     {cat} ({count})
                   </button>
                 );

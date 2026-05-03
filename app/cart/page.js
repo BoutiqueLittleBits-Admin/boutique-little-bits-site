@@ -101,7 +101,6 @@ export default function CartPage() {
     return (
       <div className="min-h-screen">
         <section className="relative overflow-hidden px-4 pt-28 pb-14 sm:px-6 md:pt-32 md:pb-18 watercolor-soft">
-          <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
           <div className="relative mx-auto max-w-3xl rounded-[2rem] border border-white bg-white/78 p-8 text-center shadow-boutique backdrop-blur-md md:p-12">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Your cart</p>
             <h1 className="mt-4 font-display text-5xl text-brand-plum md:text-6xl">Waiting for a little joy.</h1>
@@ -128,7 +127,6 @@ export default function CartPage() {
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden px-4 pt-28 pb-12 sm:px-6 md:pt-32 md:pb-14 watercolor-soft">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Packed with care</p>
           <h1 className="mt-4 font-display text-5xl text-brand-plum md:text-6xl">Your Cart</h1>

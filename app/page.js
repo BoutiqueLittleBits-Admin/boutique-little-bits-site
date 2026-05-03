@@ -51,7 +51,6 @@ export default function Home() {
       <Toast message="Added to cart. View it anytime from the cart." isVisible={showToast} />
 
       <section className="relative overflow-hidden px-6 pt-28 pb-12 md:pt-32 md:pb-16 watercolor-soft">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/94 via-white/70 to-white/24" aria-hidden="true"></div>
         <div className="relative max-w-6xl mx-auto">
           <div className="mx-auto max-w-4xl rounded-[2.5rem] px-6 py-12 text-center md:px-12 md:py-16 boutique-surface">
             <div className="brand-lockup">
@@ -73,7 +72,6 @@ export default function Home() {
 
       {featuredProducts.length > 0 && (
       <section className="relative overflow-hidden px-6 py-16 watercolor-soft">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/72 via-brand-cream/78 to-white/86" aria-hidden="true"></div>
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl text-brand-plum mb-4">Best Little Finds</h2>

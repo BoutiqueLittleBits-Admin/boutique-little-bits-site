@@ -35,7 +35,6 @@ export default function ShippingPolicy() {
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden px-6 pt-28 pb-12 md:pt-32 md:pb-16 watercolor-soft">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-4xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Packed with care</p>
           <h1 className="mt-4 font-display text-4xl leading-tight text-brand-plum sm:text-5xl md:text-6xl">Shipping Policy</h1>
@@ -49,7 +48,7 @@ export default function ShippingPolicy() {
         <div className="mx-auto max-w-4xl rounded-[2rem] p-7 md:p-10 boutique-panel">
           <div className="grid gap-5">
             {sections.map((section) => (
-              <div key={section.title} className="rounded-[1.5rem] bg-brand-cream p-6">
+              <div key={section.title} className="rounded-[1.5rem] border border-brand-lavender bg-white/56 p-6 backdrop-blur-sm">
                 <h2 className="font-display text-3xl text-brand-plum">{section.title}</h2>
                 <div className="mt-4 space-y-3">
                   {section.body.map((copy) => (

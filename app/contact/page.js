@@ -31,7 +31,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden px-6 pt-28 pb-12 md:pt-32 md:pb-16 watercolor-soft">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-4xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-coral">Questions, orders, custom gifts</p>
           <h1 className="mt-4 font-display text-4xl leading-tight text-brand-plum sm:text-5xl md:text-6xl">Get in Touch</h1>
@@ -77,7 +76,7 @@ export default function ContactPage() {
           <div className="rounded-[2rem] p-7 md:p-10 boutique-panel">
             <h2 className="font-display text-4xl text-brand-plum">Send a Message</h2>
             {submitted ? (
-              <div className="mt-8 rounded-[1.5rem] bg-brand-cream p-8 text-center">
+              <div className="mt-8 rounded-[1.5rem] border border-brand-lavender bg-white/56 p-8 text-center backdrop-blur-sm">
                 <h3 className="font-display text-3xl text-brand-plum">Message sent</h3>
                 <p className="mt-3 text-brand-taupe">Thank you for reaching out. We will get back to you soon.</p>
               </div>

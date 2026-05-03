@@ -62,7 +62,7 @@ export default function Header() {
             </a>
 
             <div className="absolute right-0 top-full pt-2 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="overflow-hidden rounded-[1.25rem] border border-brand-lavender bg-white shadow-boutique">
+              <div className="overflow-hidden rounded-[1.25rem] border border-brand-lavender bg-[#fffdfb] shadow-boutique">
                 {isLoaded && cartCount > 0 && (
                   <div className="border-b border-brand-lavender bg-brand-cream p-4">
                     {qualifiesForFreeShipping ? (
@@ -81,7 +81,7 @@ export default function Header() {
                 {!isLoaded ? (
                   <div className="p-6 text-center text-brand-taupe">Loading...</div>
                 ) : cartCount === 0 ? (
-                  <div className="bg-white p-6 text-center">
+                  <div className="bg-[#fffdfb] p-6 text-center">
                     <p className="text-brand-taupe mb-4">Your cart is empty</p>
                     <a href="/shop" className="inline-block bg-brand-sage text-white px-4 py-2 rounded-lg font-semibold hover:bg-brand-coral transition-colors text-sm">Start Shopping</a>
                   </div>
@@ -89,7 +89,7 @@ export default function Header() {
                   <>
                     <div className="max-h-64 overflow-y-auto">
                       {cart.slice(0, 3).map((item, index) => (
-                        <div key={item.cartKey || item.slug || index} className="flex items-center gap-3 p-4 border-b border-brand-lavender bg-white last:border-b-0">
+                        <div key={item.cartKey || item.slug || index} className="flex items-center gap-3 p-4 border-b border-brand-lavender bg-[#fffdfb] last:border-b-0">
                           <div className="w-12 h-12 bg-brand-cream rounded-lg overflow-hidden flex-shrink-0">
                             <img src={item.image} alt={item.name} className="w-full h-full object-contain p-1" />
                           </div>

@@ -107,7 +107,6 @@ export default function ProductPage() {
     return (
       <div className="min-h-screen">
         <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 py-28 watercolor-soft">
-          <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
           <div className="relative rounded-[2rem] border border-white bg-white/78 p-8 text-center shadow-boutique backdrop-blur-md">
             <h1 className="font-display text-4xl text-brand-plum">Product not found</h1>
             <a href="/shop" className="mt-6 inline-flex rounded-full bg-brand-plum px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-coral">Back to Shop</a>
@@ -125,7 +124,6 @@ export default function ProductPage() {
       <Toast message="Added to cart. View it anytime from the cart." isVisible={showToast} />
 
       <section className="relative overflow-hidden px-4 pt-28 pb-12 sm:px-6 md:pt-32 md:pb-14 watercolor-soft">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/72 to-white/35" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl">
           <a href="/shop" className="inline-flex text-sm font-bold text-brand-plum transition hover:text-brand-coral">Back to Shop</a>
 
