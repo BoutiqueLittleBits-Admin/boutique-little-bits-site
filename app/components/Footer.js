@@ -17,7 +17,7 @@ export default function Footer() {
             <h4 className="font-semibold text-white mb-4">Shop</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="/shop" className="text-white/70 hover:text-white transition-colors">All Products</a></li>
-              <li><a href="/shop" className="text-white/70 hover:text-white transition-colors">Gift Guide</a></li>
+              <li><a href="/gift-guide" className="text-white/70 hover:text-white transition-colors">Gift Guide</a></li>
               <li><a href="/cart" className="text-white/70 hover:text-white transition-colors">Cart</a></li>
             </ul>
           </div>

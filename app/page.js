@@ -61,7 +61,7 @@ export default function Home() {
             <p className="mx-auto mt-6 max-w-2xl text-lg md:text-xl text-brand-taupe leading-relaxed">Kids' kits, self-care gifts, personalized finds, and thoughtful little surprises, handpicked to make gifting easy.</p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <a href="/shop" className="inline-block bg-brand-plum text-white px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-brand-coral transition-colors text-center shadow-sm">Shop Gift-Ready Finds</a>
-              <a href="/shop" className="inline-block text-brand-plum px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:text-brand-coral transition-colors border border-brand-lavender bg-white/70 text-center">Explore the Gift Guide</a>
+              <a href="/gift-guide" className="inline-block text-brand-plum px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:text-brand-coral transition-colors border border-brand-lavender bg-white/70 text-center">Explore the Gift Guide</a>
             </div>
             <div className="mx-auto mt-9 max-w-3xl border-t border-brand-lavender pt-5">
               <TrustStrip />
@@ -125,7 +125,7 @@ export default function Home() {
               { name: "Gift Sets", note: "Ready-to-give bundles" },
               { name: "Party Favors", note: "Small surprises for big moments" },
             ].map((cat, i) => (
-              <a key={i} href="/shop" className="group flex min-h-36 flex-col items-start justify-center rounded-2xl p-5 transition-all boutique-card hover:-translate-y-0.5 hover:bg-white">
+              <a key={i} href="/gift-guide" className="group flex min-h-36 flex-col items-start justify-center rounded-2xl p-5 transition-all boutique-card hover:-translate-y-0.5 hover:bg-white">
                 <h3 className="font-display text-2xl leading-tight text-brand-plum transition-colors group-hover:text-brand-coral">{cat.name}</h3>
                 <p className="mt-2 text-sm leading-6 text-brand-taupe">{cat.note}</p>
               </a>

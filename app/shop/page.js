@@ -154,7 +154,7 @@ export default function ShopPage() {
 
             <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
               {giftPaths.map((path) => (
-                <a key={path.title} href="/shop" className="group rounded-2xl p-4 transition hover:-translate-y-0.5 hover:shadow-soft boutique-surface">
+                <a key={path.title} href="/gift-guide" className="group rounded-2xl p-4 transition hover:-translate-y-0.5 hover:shadow-soft boutique-surface">
                   <h2 className="font-display text-xl leading-tight text-brand-plum group-hover:text-brand-coral transition-colors">{path.title}</h2>
                   <p className="mt-2 text-xs leading-5 text-brand-taupe">{path.text}</p>
                 </a>

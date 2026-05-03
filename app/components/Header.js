@@ -29,18 +29,17 @@ export default function Header() {
             {[
               ['/', 'Home'],
               ['/shop', 'Shop'],
-              ['/shop', 'Gift Guide'],
+              ['/gift-guide', 'Gift Guide'],
               ['/about', 'About'],
               ['/contact', 'Contact'],
             ].map(([href, label]) => {
-              const active = href === '/' ? pathname === '/' : pathname === href && label !== 'Gift Guide';
-              const giftActive = false;
+              const active = href === '/' ? pathname === '/' : pathname === href;
               return (
                 <a
                   key={label}
                   href={href}
                   className={`${navLinkClass} ${
-                    active || giftActive
+                    active
                       ? 'text-brand-plum after:absolute after:left-2 after:right-2 after:bottom-1 after:h-px after:bg-brand-plum'
                       : 'text-brand-ink/55 hover:text-brand-plum'
                   }`}
@@ -137,7 +136,7 @@ export default function Header() {
           <div className="flex flex-col gap-4 text-brand-ink font-medium">
             <a href="/" className="hover:text-brand-coral transition-colors py-2">Home</a>
             <a href="/shop" className="hover:text-brand-coral transition-colors py-2">Shop</a>
-            <a href="/shop" className="hover:text-brand-coral transition-colors py-2">Gift Guide</a>
+            <a href="/gift-guide" className="hover:text-brand-coral transition-colors py-2">Gift Guide</a>
             <a href="/about" className="hover:text-brand-coral transition-colors py-2">About</a>
             <a href="/contact" className="hover:text-brand-coral transition-colors py-2">Contact</a>
           </div>
